@@ -4,11 +4,8 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-# gem "rails"
-#group :development do
-gem 'pry'
-#end 
+gem 'httparty'
 
-#group :production do 
 gem 'nokogiri'
-#end 
+
+gem 'pry'
