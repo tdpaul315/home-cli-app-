@@ -10,7 +10,7 @@ class Stats
     @reported_cases = reported_cases
     @hospitalizations = hospitalizations
     @deaths = deaths
-    @@stats << self 
+    @@stats << self
   end
 
   
