@@ -29,14 +29,14 @@ class API
          @all_counties = JSON.parse(HTTParty.get(URL).response.body)["features"]
     end 
 
-    #def self.display_stats(stats_data) #WORKING
+    def self.display_stats(stats_data) #WORKING
         #format them and then display to user
-        #print "
-         #County Name : #{stats_data["CountyName"]}
+        print "
+         County Name : #{stats_data["CountyName"]}
          #Reported Cases: #{stats_data["NumberReportedCases"]}
          #Deaths: #{stats_data["Deaths"]}
          #Case Rates: #{stats_data["CaseRate"]}
          #Hospitalizations: #{stats_data["Hospitalizations"]}
-        # "
-    #end
+        "
+    end
 end 
