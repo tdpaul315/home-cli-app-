@@ -1,6 +1,6 @@
 require 'pry'
 require 'httparty'
-require 'json'
+require "json", ">= 2.3.0"
 #require 'open_uri_redirections'
 
 require_relative '../lib/api.rb'
