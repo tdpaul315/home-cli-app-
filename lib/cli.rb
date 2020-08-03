@@ -1,11 +1,10 @@
 class CLI
 
     def run
-        #API.fetch_counties
+        API.fetch_counties
         welcome
         get_county_name
         present_user_option
-        exit_and_goodbye
     end
 
     def welcome # WORKING
