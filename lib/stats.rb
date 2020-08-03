@@ -1,19 +1,15 @@
 class Stats
   attr_accessor :county_name
-  attr_reader :reported_cases, :hospitalizations, :deaths
 
-  @@stats = []
+  @@all = []
 
 
-  def initialize(county_name)
+  def initialize(county_name) #WORKING
     @county_name = county_name
-    @reported_cases = reported_cases
-    @hospitalizations = hospitalizations
-    @deaths = deaths
-    @@stats << self
+    @@all << self
   end
 
-  
-
-
+  def self.all 
+    @@all 
+  end 
 end

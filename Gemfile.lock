@@ -14,9 +14,11 @@ GEM
     multi_xml (0.6.0)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
+    open_uri_redirections (0.2.1)
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
+    rubysl-open-uri (2.0.0)
 
 PLATFORMS
   ruby
@@ -26,6 +28,7 @@ DEPENDENCIES
   json
   nokogiri
   pry
+  
 
 BUNDLED WITH
    2.1.4
