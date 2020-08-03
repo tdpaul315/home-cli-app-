@@ -10,7 +10,7 @@ PROGRAMMING LANGUAGE:
 Built in Ruby - Using Visual Studio Code
 
 PREREQUISITES:
-- Run bundle init
+- Run bundle init in the command line 
 
 Type bundle init, then type return 
 
