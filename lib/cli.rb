@@ -35,8 +35,8 @@ class CLI
         API.get_stats_by_county(county_name)
        else
         puts "This county does not exist, please try again."
-        #get_county_name
-       #end 
+        get_county_name
+       end 
     end 
     
     #def exit_and_goodbye #WORKING
