@@ -24,10 +24,10 @@ class API
         array
     end 
 
-    #def self.fetch_counties #WORKING 
-         # fetch data from API and assign to a variable
-        # @all_counties = JSON.parse(HTTParty.get(URL).response.body)["features"]
-   # end 
+    def self.fetch_counties #WORKING 
+         #fetch data from API and assign to a variable
+         @all_counties = JSON.parse(HTTParty.get(URL).response.body)["features"]
+    end 
 
     #def self.display_stats(stats_data) #WORKING
         #format them and then display to user
