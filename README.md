@@ -9,6 +9,7 @@ Given the current pandemic we are all facing with COVID-19, I thought an applica
 PROGRAMMING LANGUAGE:
 Built in Ruby - Using Visual Studio Code
 
+
 PREREQUISITES:
 - Run bundle init in the command line 
 
@@ -32,5 +33,24 @@ require 'pry'
 #require_relative '../lib/cli.rb'
 #require_relative '../lib/stats.rb'
 
-Now its time to create! 
+INSTRUCTIONS: 
+
+To run the program from the command-line, Type bin/run. 
+
+You will be greeted with the welcome message: 
+
+"Welcome to Stats-19! Your COVID-19 Stat appication for the state of Georgia!" 
+"Please enter county name." 
+
+Note: this application is built for Georgia counties ONLY (a complete list of counties can be found here https://www.alphalists.com/list/alphabetical-list-georgia-counties
+
+ex: Cobb, Hall, Forsyth 
+
+After entering the county name, Type enter and you will get a formatted list of the data retrieved from the API.
+
+A prompt will appear at the bottom of the data that asks "Do you want to check another county?" If Y (yes) is input, then you will be prompted to enter another county. Else, if the input is N (No), the exit greeting and application exit will occur. 
+
+If a invalid county is input, an error message will appear and the prompt to enter county name will appear again. 
+
+Enjoy! 
 
