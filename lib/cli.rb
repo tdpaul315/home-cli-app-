@@ -39,8 +39,8 @@ class CLI
        end 
     end 
     
-    #def exit_and_goodbye #WORKING
-     #   puts "Thank you for using the Stats-19 app! Have a great day!"
-    #end 
+    def exit_and_goodbye #WORKING
+        puts "Thank you for using the Stats-19 app! Have a great day!"
+    end 
 
 end
