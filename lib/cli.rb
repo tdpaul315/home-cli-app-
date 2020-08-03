@@ -30,14 +30,14 @@ class CLI
         end 
     end 
 
-    #def check_input(county_name) #WORKING - error handling
-     #  if API.counties.include?(county_name.downcase)
-      #  API.get_stats_by_county(county_name)
-       #else
-        #puts "This county does not exist, please try again."
+    def check_input(county_name) #WORKING - error handling
+       if API.counties.include?(county_name.downcase)
+        API.get_stats_by_county(county_name)
+       else
+        puts "This county does not exist, please try again."
         #get_county_name
        #end 
-    #end 
+    end 
     
     #def exit_and_goodbye #WORKING
      #   puts "Thank you for using the Stats-19 app! Have a great day!"
