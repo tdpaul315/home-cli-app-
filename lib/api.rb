@@ -14,15 +14,15 @@ class API
         end
     end
 
-    #def self.counties #WORKING
-     #   array = []
-      #  @all_counties.each do |c|
-       #     if c["attributes"]["CountyName"]
-        #        array <<  c["attributes"]["CountyName"].downcase
-         #   end 
-        #end 
-        #array
-    #end 
+    def self.counties #WORKING
+        array = []
+        @all_counties.each do |c|
+            if c["attributes"]["CountyName"]
+                array <<  c["attributes"]["CountyName"].downcase
+            end 
+        end 
+        array
+    end 
 
     #def self.fetch_counties #WORKING 
          # fetch data from API and assign to a variable
