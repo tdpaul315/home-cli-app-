@@ -11,12 +11,12 @@ class CLI
     puts "Welcome to Stats-19, your COVID-19 Stat application for the state of Georgia."
     end 
 
-    #def get_county_name # WORKING 
-     #  puts "Please enter county name."
-      # county_name = gets.strip
-       #check_input(county_name)
-       #return county_name
-    #end
+    def get_county_name # WORKING 
+       puts "Please enter county name."
+       county_name = gets.strip
+       check_input(county_name)
+       return county_name
+    end
 
     #def present_user_option # WORKING 
      #   puts "Would you like to check another county?"
