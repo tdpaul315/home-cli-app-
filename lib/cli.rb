@@ -91,7 +91,7 @@ class CLI
     end 
     
     def exit_and_goodbye #WORKING
-        puts "Thank you for using the Stats-19 app! Have a great day!"
+        puts "Thank you for using the Stats-19 app! Please remember to social distance and wear a mask! Have a great day!"
     end 
 
 end
