@@ -17,12 +17,6 @@ Type bundle init, then type return
 
 Now all of the gems needed to complete the project are made available to install. 
 
-- In the GEMFILE:  require pry, httparty, and json by typing the following:
-
-require 'pry'
-require 'httparty'
-require 'json'
-
 Run 'bundle install' from the command line; this installs the gems that were specified as required
 
 To establish the development environment, the environment configuration must be completed. In the configuration folder, a file 'enviromental.rb' is created to house the code needed in order for the program to run properly. The following is input in addition to the required gems: 
@@ -37,10 +31,11 @@ INSTRUCTIONS:
 
 To run the program from the command-line, Type bin/run. 
 
-You will be greeted with the welcome message: 
+The user will be greeted with the welcome message: 
 
-"Welcome to Stats-19! Your COVID-19 Stat appication for the state of Georgia!" 
-"Please enter county name." 
+"Welcome to Stats-19! Your COVID-19 Stat appication for the state of Georgia! Please select from one of the following options:" 
+
+The user will then make a selection and follow the prompts. 
 
 Note: this application is built for Georgia counties ONLY (a complete list of counties can be found here https://www.alphalists.com/list/alphabetical-list-georgia-counties
 
@@ -52,5 +47,15 @@ A prompt will appear at the bottom of the data that asks "Do you want to check a
 
 If a invalid county is input, an error message will appear and the prompt to enter county name will appear again. 
 
-Enjoy! 
+CONTRIBUTING 
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+LICENSE
+
+MIT 
+
+https://github.com/tdpaul315/home-cli-app-/blob/master/LICENSE
+
+
 
