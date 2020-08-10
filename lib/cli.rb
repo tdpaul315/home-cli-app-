@@ -22,12 +22,9 @@ class CLI
             list_counties
             get_county_name
             present_user_option_two
-        elsif user_input == (3..100)
-            puts "Input is not recognized, please try again."
-            present_user_option_one
         elsif user_input == "2"
             exit_and_goodbye
-        else user_input == (3..100)
+        else 
             puts "Input is not recognized, please try again."
             present_user_option_one
             puts "          "
