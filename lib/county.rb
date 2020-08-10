@@ -1,7 +1,7 @@
 class County
   attr_accessor :county_name, :number_reported_cases, :deaths, :case_rate, :hospitalizations
 
-  @@all = []
+  @@counties = []
   
   
 
@@ -12,10 +12,14 @@ class County
     @deaths = attribute_hash["Deaths"]
     @case_rate = attribute_hash["CaseRate"]
     @hospitalizations = attribute_hash["Hospitalizations"]
-    @@all << self
+    @@counties << self
   end
 
   def self.all 
-    @@all 
+    @@counties 
   end 
+
+  def self.find_by_name(county_name)
+    @@counties.find{|county| county.county_name == county_name}
+  end
 end 
