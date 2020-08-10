@@ -6,7 +6,7 @@ class CLI
         present_user_option_one
         #list_counties
         #get_county_name
-        #present_user_option
+        #present_user_option_two
     end
 
     def welcome # WORKING
@@ -21,7 +21,7 @@ class CLI
         if user_input == "1"
             list_counties
             get_county_name
-            present_user_option
+            present_user_option_two
         elsif user_input == (3..100)
             puts "Input is not recognized, please try again."
             present_user_option_one
@@ -58,22 +58,22 @@ class CLI
         "
     end
 
-    def present_user_option # WORKING 
+    def present_user_option_two # WORKING 
        puts "Would you like to check another county?"
        puts "Please enter Y for Yes or N for No"
         user_input = gets.strip
         if user_input == "Y" 
             get_county_name
-           present_user_option
+           present_user_option_two 
         elsif user_input == "yes"
             get_county_name
-            present_user_option
+            present_user_option_two
         elsif user_input == "y"
             get_county_name
-            present_user_option
+            present_user_option_two
         elsif user_input == "Yes"
             get_county_name
-            present_user_option
+            present_user_option_two
         elsif user_input == "n"
             exit_and_goodbye
         elsif user_input == "No"
