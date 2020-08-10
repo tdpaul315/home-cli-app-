@@ -4,7 +4,7 @@ class API
 
     
 
-def self.fetch_counties #WORKING 
+    def self.fetch_counties #WORKING 
          #fetch data from API and assign to a variable
          @all_counties = JSON.parse(HTTParty.get(URL).response.body)["features"]
          @all_counties.each do |c|

@@ -7,5 +7,3 @@ require_relative '../lib/api.rb'
 require_relative '../lib/cli.rb'
 require_relative '../lib/county.rb'
 
-cli = CLI.new
-cli.run
