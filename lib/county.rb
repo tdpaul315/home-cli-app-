@@ -16,10 +16,6 @@ class County
   def self.all 
     @@counties 
   end 
-
-  def self.find_by_name(county_name)
-    @@counties.find{|county| county.county_name == county_name}
-  end
   
   def self.counties #WORKING
     @@counties.map do |c|
