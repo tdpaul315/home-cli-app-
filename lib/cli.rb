@@ -56,6 +56,7 @@ class CLI
     end
 
     def present_user_option_two # WORKING 
+       puts "          "
        puts "Would you like to check another county?"
        puts "Please enter Y for Yes or N for No"
         user_input = gets.strip
