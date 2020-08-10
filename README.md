@@ -53,7 +53,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 LICENSE
 
-MIT 
+[MIT](https://github.com/tdpaul315/home-cli-app-/blob/master/LICENSE) 
 
 
 
