@@ -3,10 +3,7 @@ class CLI
     def run
         API.fetch_counties
         welcome
-        present_user_option_one
-        #list_counties
-        #get_county_name
-        #present_user_option_two
+        present_user_options
     end
 
     def welcome # WORKING
@@ -14,7 +11,7 @@ class CLI
       puts "          "
     end 
 
-    def present_user_option_one
+    def present_user_options
         puts "To see a list of Georgia counties, type 1."
         puts "To exit the application, type 2."
         user_input = gets.strip
@@ -26,13 +23,13 @@ class CLI
             exit_and_goodbye
         else 
             puts "Input is not recognized, please try again."
-            present_user_option_one
+            present_user_options
             puts "          "
         end
     end 
 
     def list_counties
-        print API.counties
+        print County.counties 
         puts "          "
         puts "          "
     end 
@@ -44,14 +41,14 @@ class CLI
        county_name
     end
 
-    def API.display_stats(stats_data) #WORKING
+    def display_stats(stats_data) #WORKING
         #format them and then display to user
         print "
-         County Name : #{stats_data["CountyName"]}
-         #Reported Cases: #{stats_data["NumberReportedCases"]}
-         #Deaths: #{stats_data["Deaths"]}
-         #Case Rates: #{stats_data["CaseRate"]}
-         #Hospitalizations: #{stats_data["Hospitalizations"]}
+         County Name : #{stats_data.county_name}
+         #Reported Cases: #{stats_data.number_reported_cases}
+         #Deaths: #{stats_data.deaths}
+         #Case Rates: #{stats_data.case_rate}
+         #Hospitalizations: #{stats_data.hospitalizations}
         "
     end
 
@@ -74,6 +71,8 @@ class CLI
             present_user_option_two
         elsif user_input == "n"
             exit_and_goodbye
+        elsif user_input == "no"
+            exit_and_goodbye
         elsif user_input == "No"
             exit_and_goodbye
         elsif user_input == "N"
@@ -86,8 +85,10 @@ class CLI
  
 
     def check_input(county_name) #WORKING - error handling
-       if API.counties.include?(county_name.downcase)
-        API.get_stats_by_county(county_name)
+       if County.counties.include?(county_name.downcase)
+        county = County.get_stats_by_county(county_name)
+        #display stats to the user 
+        display_stats(county)
        else
         puts "This county does not exist, please try again."
         get_county_name
