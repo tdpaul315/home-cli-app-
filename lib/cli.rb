@@ -76,8 +76,11 @@ class CLI
             exit_and_goodbye
         elsif user_input == "No"
             exit_and_goodbye
-        else user_input == "N"
+        elsif user_input == "N"
            exit_and_goodbye
+        else
+           puts "Input not recognized, please try again."
+           present_user_option_two
         end
     end 
  
