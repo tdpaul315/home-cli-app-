@@ -55,7 +55,6 @@ LICENSE
 
 MIT 
 
-https://github.com/tdpaul315/home-cli-app-/blob/master/LICENSE
 
 
 
