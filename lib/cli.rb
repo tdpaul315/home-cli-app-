@@ -29,7 +29,7 @@ class CLI
     end 
 
     def list_counties
-        print County.counties 
+        County.counties 
         puts "          "
         puts "          "
     end 

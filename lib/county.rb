@@ -18,12 +18,12 @@ class County
   end 
   
   def self.counties #WORKING
-    @@counties.map do |c|
-      c.county_name
+    @@counties.each_with_index do |county, index|
+      puts "#{index+1}. #{county.county_name}"
     end  
   end 
 
-  def self.get_stats_by_county(county_name) #WORKING - POSSIBLE REFACTOR - could replace whole if statement with  - all_counties.find_by{county["attirubtes"]["countyname"] == county_name}
+  def self.get_stats_by_county(county_name) #WORKING - POSSIBLE REFACTOR - could replace whole if statement with  - @@counties.find_by{county["attirubtes"]["countyname"] == county_name}
     # pull out results for county_name
     # go over each one and find the one who's county name == county_name
     @@counties.each do |county|
