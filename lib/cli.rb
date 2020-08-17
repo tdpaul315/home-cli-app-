@@ -37,7 +37,7 @@ class CLI
     def get_county_name # WORKING 
        puts "Please enter county name."
        county_name = gets.strip
-       check_input(county_name)
+       check_input(County.get_stats_by_county(county_name))
        county_name
     end
 
@@ -57,26 +57,16 @@ class CLI
        puts "Would you like to check another county?"
        puts "Please enter Y for Yes or N for No"
         user_input = gets.strip
-        if user_input == "Y" 
+        if user_input == "Y" || user_input == "y"
             get_county_name
            present_user_option_two 
-        elsif user_input == "yes"
+        elsif user_input == "yes" || user_input == "Yes"
             get_county_name
             present_user_option_two
-        elsif user_input == "y"
-            get_county_name
-            present_user_option_two
-        elsif user_input == "Yes"
-            get_county_name
-            present_user_option_two
-        elsif user_input == "n"
+        elsif user_input == "n" || user_input == "N"
             exit_and_goodbye
-        elsif user_input == "no"
+        elsif user_input == "no" || user_input == "No"
             exit_and_goodbye
-        elsif user_input == "No"
-            exit_and_goodbye
-        elsif user_input == "N"
-           exit_and_goodbye
         else
            puts "Input not recognized, please try again."
            present_user_option_two
