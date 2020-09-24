@@ -42,15 +42,19 @@ class CLI
     end
 
     def display_stats(stats_data) #WORKING
+        #binding.pry
         #format them and then display to user
+        #stats_data.each do |d|
         print "
-         County Name : #{stats_data.county_name}
+         #County Name : #{stats_data.county_name}
          #Reported Cases: #{stats_data.number_reported_cases}
          #Deaths: #{stats_data.deaths}
          #Case Rates: #{stats_data.case_rate}
          #Hospitalizations: #{stats_data.hospitalizations}
-        "
+        " 
+      #end 
     end
+
 
     def present_user_option_two # WORKING 
        puts "          "
@@ -75,10 +79,10 @@ class CLI
  
 
     def check_input(county_name) #WORKING - error handling
-       if County.counties.include?(county_name.downcase)
-        county = County.get_stats_by_county(county_name)
+       if County.counties.include?(county_name)
+        #county = County.get_stats_by_county(county_name)
         #display stats to the user 
-        display_stats(county)
+        display_stats(county_name)
        else
         puts "This county does not exist, please try again."
         get_county_name
@@ -88,5 +92,4 @@ class CLI
     def exit_and_goodbye #WORKING
         puts "Thank you for using the Stats-19 app! Please remember to social distance and wear a mask! Have a great day!"
     end 
-
-end
+end 
