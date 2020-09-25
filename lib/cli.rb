@@ -42,15 +42,13 @@ class CLI
     end
 
     def display_stats(stats_data) #WORKING
-        #binding.pry
         #format them and then display to user
-        #stats_data.each do |d|
         print "
-         #County Name : #{stats_data.county_name}
-         #Reported Cases: #{stats_data.number_reported_cases}
-         #Deaths: #{stats_data.deaths}
-         #Case Rates: #{stats_data.case_rate}
-         #Hospitalizations: #{stats_data.hospitalizations}
+         County Name : #{stats_data.county_name}
+         Reported Cases: #{stats_data.number_reported_cases}
+         Deaths: #{stats_data.deaths}
+         Case Rates: #{stats_data.case_rate}
+         Hospitalizations: #{stats_data.hospitalizations}
         " 
       #end 
     end
@@ -80,7 +78,6 @@ class CLI
 
     def check_input(county_name) #WORKING - error handling
        if County.counties.include?(county_name)
-        #county = County.get_stats_by_county(county_name)
         #display stats to the user 
         display_stats(county_name)
        else
